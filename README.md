@@ -1,58 +1,42 @@
 # Lovpen Copy Title
 
-Chrome extension to copy page title and URL in multiple formats with keyboard shortcuts.
+一键复制网页标题和链接，支持多种格式和快捷键。
 
-## Features
+## 功能特性
 
-- **Multiple formats**: URL only, title only, title + URL, Markdown link, or custom template
-- **Keyboard shortcuts**: `Cmd+K` (title + URL), `Cmd+Shift+K` (Markdown) on Mac
-- **Custom templates**: Define your own format using `{title}` and `{url}` placeholders
-- **One-click copy**: Click any format in the popup to copy instantly
+- **多种格式**: 纯网址、纯标题、标题+网址、Markdown 链接、自定义模板
+- **快捷键**: `⌘K` 复制标题+网址，`⌘⇧K` 复制 Markdown 格式
+- **自定义模板**: 使用 `{title}` 和 `{url}` 占位符定义格式
 
-## Installation
+## cmd+K 复制标题格式效果
 
-### From Source
+![cmd+K复制标题格式效果](assets/cmd+K复制标题格式效果.png)
+
+## cmd+shift+K 复制 Markdown 格式效果
+
+![cmd+shift+K复制markdown格式效果](assets/cmd+shift+K复制markdown格式效果.png)
+
+## 本地安装插件
 
 ```bash
 pnpm install
 pnpm build
 ```
 
-1. Open `chrome://extensions/`
-2. Enable "Developer mode"
-3. Click "Load unpacked" and select the `dist/` folder
+1. 打开 `chrome://extensions/`，开启「开发者模式」
+2. 点击「加载已解压的扩展程序」，选择 `dist/` 目录
 
-### Development
+![本地安装插件](assets/本地安装插件.png)
 
-```bash
-pnpm dev
-```
+## 建议完全访问权限
 
-Load the extension from `dist/` folder. Changes hot-reload automatically.
+将扩展设置为「完全访问权限」以确保快捷键在所有页面生效。
 
-## Keyboard Shortcuts
+![建议完全访问权限](assets/建议完全访问权限.png)
 
-| Shortcut | Mac | Action |
-|----------|-----|--------|
-| `Ctrl+K` | `Cmd+K` | Copy title + URL |
-| `Ctrl+Shift+K` | `Cmd+Shift+K` | Copy as Markdown |
+## 自定义快捷键
 
-Customize shortcuts at `chrome://extensions/shortcuts`
-
-## Custom Format
-
-Use placeholders in your template:
-- `{title}` - Page title
-- `{url}` - Page URL
-
-Example: `{title} | {url}` produces `Page Title | https://example.com`
-
-## Tech Stack
-
-- React 19 + TypeScript
-- Vite + @crxjs/vite-plugin
-- Tailwind CSS
-- Chrome Manifest V3
+`chrome://extensions/shortcuts`
 
 ## License
 

@@ -32,15 +32,15 @@
     },
     "copy-title-url": {
       "suggested_key": {
-        "default": "Ctrl+K",
-        "mac": "Command+K"
+        "default": "Alt+K",
+        "mac": "Alt+K"
       },
       "description": "Copy title and URL"
     },
     "copy-markdown": {
       "suggested_key": {
-        "default": "Ctrl+Shift+K",
-        "mac": "Command+Shift+K"
+        "default": "Alt+Shift+K",
+        "mac": "Alt+Shift+K"
       },
       "description": "Copy as Markdown link"
     },

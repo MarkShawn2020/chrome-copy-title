@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Better Copy Title And Link",
   "version": "1.0.0",
-  "description": "Copy page title in various formats with keyboard shortcut",
+  "description": "Copy page title and URL in multiple formats with keyboard shortcuts",
   "permissions": ["storage", "activeTab", "scripting", "notifications"],
   "host_permissions": ["<all_urls>"],
   "action": {

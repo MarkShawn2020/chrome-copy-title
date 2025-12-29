@@ -1,6 +1,7 @@
 {
   "name": "chrome-copy-title",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "packageManager": "pnpm@10.18.1",
   "description": "Chrome extension to copy page title in various formats",
   "type": "module",
   "scripts": {

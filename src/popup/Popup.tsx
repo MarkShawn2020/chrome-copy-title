@@ -53,7 +53,7 @@ export function Popup() {
 
   return (
     <div className="w-72 p-3 text-sm">
-      <h1 className="mb-2 text-base font-semibold">Lovpen Copy Title</h1>
+      <h1 className="mb-2 text-base font-semibold">Better Copy Title And Link</h1>
 
       {/* 当前页面信息 */}
       <div className="mb-3 rounded bg-gray-100 p-2">

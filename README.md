@@ -1,4 +1,4 @@
-# Lovpen Copy Title
+# Better Copy Title And Link
 
 一键复制网页标题和链接，支持多种格式和快捷键。
 

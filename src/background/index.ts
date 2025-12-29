@@ -58,7 +58,7 @@ chrome.commands.onCommand.addListener(async (command) => {
     chrome.notifications.create({
       type: 'basic',
       iconUrl: chrome.runtime.getURL('public/icons/icon-48.png'),
-      title: 'Lovpen Copy Title',
+      title: 'Better Copy Title And Link',
       message: '❌ 复制失败',
     });
   }

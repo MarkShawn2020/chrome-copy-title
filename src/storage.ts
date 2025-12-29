@@ -29,11 +29,11 @@ export const storage = {
 };
 
 export const FORMATS = [
-  { id: 'url' as const, name: '纯网址', icon: '🔗', template: '{url}', command: 'copy-url', shortcut: null },
-  { id: 'title' as const, name: '纯标题', icon: '📝', template: '{title}', command: 'copy-title', shortcut: null },
-  { id: 'title_url' as const, name: '标题, 网址', icon: '📋', template: '{title}, {url}', command: 'copy-title-url', shortcut: { mac: '⌘K', default: 'Ctrl+K' } },
-  { id: 'markdown' as const, name: 'Markdown', icon: '📄', template: '[{title}]({url})', command: 'copy-markdown', shortcut: { mac: '⌘⇧K', default: 'Ctrl+Shift+K' } },
-  { id: 'custom' as const, name: '自定义', icon: '⚙️', template: '', command: 'copy-custom', shortcut: null },
+  { id: 'url' as const, name: '纯网址', icon: '🔗', template: '{url}', command: 'copy-url' },
+  { id: 'title' as const, name: '纯标题', icon: '📝', template: '{title}', command: 'copy-title' },
+  { id: 'title_url' as const, name: '标题, 网址', icon: '📋', template: '{title}, {url}', command: 'copy-title-url' },
+  { id: 'markdown' as const, name: 'Markdown', icon: '📄', template: '[{title}]({url})', command: 'copy-markdown' },
+  { id: 'custom' as const, name: '自定义', icon: '⚙️', template: '', command: 'copy-custom' },
 ];
 
 export const COMMAND_TO_FORMAT = Object.fromEntries(

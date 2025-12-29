@@ -7,8 +7,8 @@ export function Popup() {
   const [customFormat, setCustomFormat] = useState('{title} - {url}');
   const [feedback, setFeedback] = useState<{ formatId: FormatId | null; msg: string }>({ formatId: null, msg: '' });
   const [editingCustom, setEditingCustom] = useState(false);
+  const [shortcuts, setShortcuts] = useState<Record<string, string>>({});
 
-  const isMac = navigator.platform.toUpperCase().includes('MAC');
 
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
@@ -18,6 +18,16 @@ export function Popup() {
 
     storage.get().then((settings) => {
       setCustomFormat(settings.customFormat);
+    });
+
+    chrome.commands.getAll().then((commands) => {
+      const map: Record<string, string> = {};
+      for (const cmd of commands) {
+        if (cmd.name && cmd.shortcut) {
+          map[cmd.name] = cmd.shortcut;
+        }
+      }
+      setShortcuts(map);
     });
   }, []);
 
@@ -47,8 +57,7 @@ export function Popup() {
   };
 
   const getShortcut = (format: (typeof FORMATS)[number]) => {
-    if (!format.shortcut) return null;
-    return isMac ? format.shortcut.mac : format.shortcut.default;
+    return shortcuts[format.command] || null;
   };
 
   return (
